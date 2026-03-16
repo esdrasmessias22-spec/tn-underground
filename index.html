@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TN Underground | Curadoria Air Max</title>
+
+<meta name="description" content="Curadoria independente de Air Max TN e Air Max 95 encontrados pela internet. Modelos raros e difíceis de encontrar.">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Poppins;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#000;
+border-bottom:1px solid #111;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-family:"Bebas Neue";
+font-size:36px;
+color:#ff2c2c;
+letter-spacing:2px;
+}
+
+.menu{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+cursor:pointer;
+transition:.3s;
+}
+
+.menu a:hover{color:#ff3b3b;}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(120deg,#000,#111);
+position:relative;
+}
+
+.hero video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:.25;
+}
+
+.hero-content{position:relative;z-index:2;}
+
+.hero h1{
+font-family:"Bebas Neue";
+font-size:120px;
+background:linear-gradient(90deg,#ff0000,#ff8800);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:700px;
+margin:20px auto;
+font-size:18px;
+color:#ccc;
+}
+
+/* ARTIGOS */
+
+.artigo{
+max-width:900px;
+margin:auto;
+padding:80px 20px;
+line-height:1.7;
+color:#ddd;
+}
+
+.artigo h2{
+font-family:"Bebas Neue";
+font-size:60px;
+margin-bottom:20px;
+}
+
+/* CATALOGO */
+
+.catalogo{padding:80px 20px;}
+
+.catalogo h1{
+text-align:center;
+font-family:"Bebas Neue";
+font-size:70px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.produto{
+background:#111;
+border-radius:12px;
+padding:20px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
+}
+
+.produto img{
+width:100%;
+height:220px;
+object-fit:contain;
+transition:.4s;
+}
+
+.produto:hover img{transform:scale(1.2);}
+
+.produto:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 60px rgba(0,0,0,.8);
+}
+
+.produto h3{margin-top:10px;}
+
+.produto button{
+margin-top:10px;
+background:#ff0000;
+border:none;
+padding:10px 18px;
+border-radius:6px;
+color:white;
+cursor:pointer;
+}
+
+/* LOGO MODELO */
+
+.logo-modelo{
+display:flex;
+justify-content:center;
+margin-bottom:40px;
+}
+
+.logo-modelo img{
+width:220px;
+filter:drop-shadow(0 0 10px rgba(255,255,255,.2));
+}
+
+/* GALERIA EXTRA */
+
+.galeria-extra{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+justify-content:center;
+margin-top:50px;
+}
+
+.galeria-extra img{
+width:260px;
+object-fit:contain;
+transition:.4s;
+}
+
+.galeria-extra img:hover{
+transform:scale(1.1) rotate(-2deg);
+}
+
+/* MODAL */
+
+.modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.95);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:200;
+}
+
+.modal-content{
+background:#111;
+padding:30px;
+border-radius:12px;
+max-width:900px;
+width:90%;
+text-align:center;
+}
+
+.modal-content img{
+width:100%;
+max-height:400px;
+object-fit:contain;
+}
+
+/* VISITANTES */
+
+.visitas{
+text-align:center;
+margin:40px;
+color:#ff7a7a;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#000;
+color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">TN Underground</div>
+
+<ul class="menu">
+<li><a onclick="mostrar('inicio')">Inicio</a></li>
+<li><a onclick="mostrar('tn')">Air Max TN</a></li>
+<li><a onclick="mostrar('am95')">Air Max 95</a></li>
+</ul>
+
+</header>
+
+<!-- INTRO ARTIGO -->
+
+<section class="artigo">
+
+<h2>Curadoria Underground</h2>
+
+<p>
+Este projeto nasceu da busca por modelos de Air Max difíceis de encontrar.
+Não é uma loja — é apenas uma curadoria visual criada após horas explorando marketplaces pela internet.
+</p>
+
+<p>
+Muitos dos modelos apresentados aqui aparecem apenas em vendedores independentes
+dentro do Mercado Livre ou em coleções pessoais.
+</p>
+
+</section>
+
+<!-- HERO -->
+
+<section id="inicio">
+
+<div class="hero">
+
+<video autoplay muted loop playsinline>
+<source src="./videos/tn.mp4" type="video/mp4">
+</video>
+
+<div class="hero-content">
+
+<h1>AIR MAX</h1>
+
+<p>
+Uma exploração visual dos modelos Air Max TN e Air Max 95 que ainda podem ser encontrados online.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ARTIGO TN -->
+
+<section class="artigo">
+
+<h2>O Impacto do Air Max TN</h2>
+
+<p>
+Lançado em 1998, o Air Max TN revolucionou o design dos sneakers.
+Seu sistema Tuned Air trouxe estabilidade e um visual agressivo que rapidamente dominou as ruas.
+</p>
+
+<p>
+Hoje alguns colorways são extremamente difíceis de encontrar,
+aparecendo apenas ocasionalmente em marketplaces ou coleções particulares.
+</p>
+
+</section>
+
+<!-- AIR MAX TN -->
+
+<section id="tn" class="catalogo">
+
+<div class="logo-modelo">
+<img src="./imagens/NIKE AIR LOGOTIP.png">
+</div>
+
+<h1>AIR MAX TN</h1>
+
+<div class="grid" id="gridTN"></div>
+
+<div class="galeria-extra">
+
+<img src="./imagens/BALTIC_BLUE-removebg-preview.png">
+<img src="./imagens/BLACK_BLACK-removebg-preview.png">
+<img src="./imagens/BLACK_WHITE-removebg-preview.png">
+<img src="./imagens/PURPLE_DRAGON-removebg-preview.png">
+<img src="./imagens/Nike_Air_Max_Plus_Yellow_Green-removebg-preview.png">
+
+</div>
+
+</section>
+
+<!-- ARTIGO 95 -->
+
+<section class="artigo">
+
+<h2>A Evolução do Air Max 95</h2>
+
+<p>
+O Air Max 95 mudou a história dos sneakers ao revelar a unidade Air também na parte frontal.
+Seu design inspirado na anatomia humana criou um visual único e futurista.
+</p>
+
+<p>
+Até hoje ele continua sendo um dos modelos mais respeitados da cultura sneaker.
+</p>
+
+</section>
+
+<!-- AIR MAX 95 -->
+
+<section id="am95" class="catalogo">
+
+<div class="logo-modelo">
+<img src="./imagens/Nike_Air_Max_95_110s-removebg-preview.png">
+</div>
+
+<h1>AIR MAX 95</h1>
+
+<div class="grid" id="grid95"></div>
+
+<div class="galeria-extra">
+
+<img src="./imagens/CORTEZES-removebg-preview.png">
+<img src="./imagens/CORTEZES-removebg-preview.png">
+<img src="./imagens/CORTEZES-removebg-preview.png">
+
+</div>
+
+</section>
+
+<!-- ARTIGO FINAL -->
+
+<section class="artigo">
+
+<h2>Curadoria Independente</h2>
+
+<p>
+Este site não vende produtos diretamente.
+Ele funciona como uma vitrine editorial que reúne modelos encontrados em marketplaces online.
+</p>
+
+<p>
+A ideia é simples: explorar a internet em busca de Air Max interessantes e compartilhar com quem também gosta desse universo.
+</p>
+
+</section>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<img id="modalImg">
+
+<h2 id="modalTitulo"></h2>
+
+<a href="https://meli.la/1mzRviB" target="_blank">
+<button>COMPRAR</button>
+</a>
+
+</div>
+
+</div>
+
+<div class="visitas">
+🔥 <span id="visitas"></span> pessoas vendo agora
+</div>
+
+<footer>
+
+TN Underground © 2026
+
+<p style="font-size:13px;color:#666;margin-top:20px;">
+Este site não vende produtos diretamente.  
+Os modelos apresentados são encontrados em marketplaces externos.
+</p>
+
+</footer>
+
+<script>
+
+function mostrar(id){
+
+document.querySelectorAll("section").forEach(s=>{
+s.style.display="none"
+})
+
+document.getElementById(id).style.display="block"
+
+}
+
+const produtosTN=[
+{nome:"Air Max TN Baltic Blue",img:"BALTIC BLUE.jpg"},
+{nome:"Air Max TN Black Black",img:"BLACK BLACK.jpg"},
+{nome:"Air Max TN Black White",img:"BLACK WHITE.jpg"},
+{nome:"Air Max TN Purple Dragon",img:"PURPLE DRAGON.jpg"},
+{nome:"Air Max TN Yellow Green",img:"Nike Air Max Plus Yellow Green (1).jpg"}
+]
+
+const produtos95=[
+{nome:"Air Max 95 Pink Beam",img:"CORTEIZ PINL.jpg"},
+{nome:"Air Max 95 Black Pink",img:"air max black balck.jpg"},
+{nome:"Air Max 95 Corteiz Green",img:"AIR MAX CORTEIZ GREEN.jpg"}
+]
+
+const gridTN=document.getElementById("gridTN")
+
+produtosTN.forEach(p=>{
+gridTN.innerHTML+=`
+<div class="produto" onclick="abrirModal('./imagens/${p.img}','${p.nome}')">
+<img src="./imagens/${p.img}">
+<h3>${p.nome}</h3>
+<button>Ver</button>
+</div>
+`
+})
+
+const grid95=document.getElementById("grid95")
+
+produtos95.forEach(p=>{
+grid95.innerHTML+=`
+<div class="produto" onclick="abrirModal('./imagens/${p.img}','${p.nome}')">
+<img src="./imagens/${p.img}">
+<h3>${p.nome}</h3>
+<button>Ver</button>
+</div>
+`
+})
+
+function abrirModal(img,nome){
+
+document.getElementById("modal").style.display="flex"
+
+document.getElementById("modalImg").src=img
+document.getElementById("modalTitulo").innerText=nome
+
+}
+
+document.getElementById("modal").onclick=function(){
+this.style.display="none"
+}
+
+function visitantes(){
+
+document.getElementById("visitas").innerText=
+Math.floor(Math.random()*40)+10
+
+}
+
+setInterval(visitantes,4000)
+
+visitantes()
+
+</script>
+
+</body>
+</html>
